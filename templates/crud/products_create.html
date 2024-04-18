@@ -1,0 +1,22 @@
+{% extends 'base/base.html' %}
+{% load static %}
+
+{% block title %}Yangilik qo'shish{% endblock title %}
+
+{% block content %}
+
+<br><br><br><br>
+    
+        <body style="background-color:powderblue;">
+        <div class="col-lg-12 col-md-12">
+            
+            <center><h2 >Qo'shish</h2>
+
+            <h4 ><form method="post" enctype="multipart/form-data">{% csrf_token %}
+                {{ form.as_p }}<br>
+                <button type="submit" style="background-color:green">Yangilik qo'shish</button>
+            </form></h4><br>
+            </center>
+        </div>
+    
+{% endblock content %}

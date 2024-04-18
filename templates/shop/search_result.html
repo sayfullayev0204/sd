@@ -1,0 +1,64 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% block content %}
+<head>
+    <style>
+                body {
+                    font-family: 'Calibri', 'sans-serif';
+                    font-size: 16px;
+                    font-weight: bold;
+                    text-align:center;
+                }
+
+                form {
+                    position: relative;
+                    bottom: 0;
+                    right: 0;
+                }
+
+
+    </style>
+</head>
+<br><br><br><br>
+<h2 class="text-center">Qidiruv natijalari</h2>
+
+
+<!--{% for yangiliklar in search %}-->
+<!--<h3>-->
+
+<!--    <p><a href="{% url 'products_detail_page' yangiliklar.slug %}"><img src="{{ yangiliklar.image.url }}"-->
+<!--                                                                        width="60%"></a></p>-->
+<!--    <a href="{% url 'products_detail_page' yangiliklar.slug %}" class="text-danger"> {{ yangiliklar.title }}</a>-->
+<!--</h3>-->
+<!--<h4><a href="{% url 'products_detail_page' yangiliklar.slug %}">Price {{ yangiliklar.price }} $</a></h4>-->
+
+<!--{% endfor %}-->
+
+    {% for yangiliklar in search %}
+          <center> <div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item women">
+                <!-- Block2 -->
+                <div class="block2">
+                    <div class="block2-pic hov-img0">
+                        <a href="{% url 'products_detail_page' yangiliklar.slug %}"
+                           class="featured_img"> <img
+                                alt="" src="{{ yangiliklar.image.url }}">
+                        </a></div>
+
+                    <div class="block2-txt flex-w flex-t p-t-14">
+                        <div class="block2-txt-child1 flex-col-l ">
+                            <a href="{% url 'products_detail_page' yangiliklar.slug %}" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
+                                {{ yangiliklar.title }}
+                            </a>
+
+                            <span class="stext-105 cl3"><a href="{% url 'products_detail_page' yangiliklar.slug %}">Price {{ yangiliklar.price }} $</a>
+								</span>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+              </center>
+
+{% endblock content %}

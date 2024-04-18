@@ -1,0 +1,643 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% block content %}
+<title>Women</title>
+<br><Br><br><br><br><br>
+
+<section class="bg0 p-t-23 p-b-140">
+		<div class="container">
+
+			<div class="flex-w flex-sb-m p-b-52">
+				<div class="flex-w flex-l-m filter-tope-group m-tb-10">
+
+				</div>
+
+
+				<!-- Search product -->
+
+				<!-- Filter -->
+				<div class="dis-none panel-filter w-full p-t-10">
+					<div class="wrap-filter flex-w bg6 w-full p-lr-40 p-t-27 p-lr-15-sm">
+
+
+
+						<div class="filter-col4 p-b-27">
+
+						</div>
+					</div>
+				</div>
+			</div>
+
+<div class="row isotope-grid">
+    {% for woman in women %}
+    {% if forloop.first %}
+    <div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item women">
+        <!-- Block2 -->
+        <div class="block2">
+            <div class="block2-pic hov-img0">
+                <a href="{{ woman.get_absolute_url }}"
+                   class="featured_img"> <img
+                        alt="" src="{{ woman.image.url }}">
+                </a>
+
+            </div>
+
+            <div class="block2-txt flex-w flex-t p-t-14">
+                <div class="block2-txt-child1 flex-col-l ">
+                    <a href="product-detail.html" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
+                        Esprit Ruffle Shirt
+                    </a>
+
+                    <span class="stext-105 cl3">
+									$16.64
+								</span>
+                </div>
+
+                <div class="block2-txt-child2 flex-r p-t-3">
+                    <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
+                        <img class="icon-heart1 dis-block trans-04"
+                             src="{% static 'images/icons/icon-heart-01.png' %}" alt="ICON">
+                        <img class="icon-heart2 dis-block trans-04 ab-t-l"
+                             src="{% static 'images/icons/icon-heart-02.png' %}" alt="ICON">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+    {% endfor %}
+    {% for woman in women %}
+    {% if forloop.counter == 2 %}
+    <div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item women">
+        <!-- Block2 -->
+        <div class="block2">
+            <div class="block2-pic hov-img0">
+                <a href="{{ woman.get_absolute_url }}"
+                   class="featured_img"> <img
+                        alt="" src="{{ woman.image.url }}">
+                </a>
+
+
+            </div>
+
+            <div class="block2-txt flex-w flex-t p-t-14">
+                <div class="block2-txt-child1 flex-col-l ">
+                    <a href="product-detail.html" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
+                        Herschel supply
+                    </a>
+
+                    <span class="stext-105 cl3">
+									$35.31
+								</span>
+                </div>
+
+                <div class="block2-txt-child2 flex-r p-t-3">
+                    <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
+                        <img class="icon-heart1 dis-block trans-04"
+                             src="{% static 'images/icons/icon-heart-01.png' %}" alt="ICON">
+                        <img class="icon-heart2 dis-block trans-04 ab-t-l"
+                             src="{% static 'images/icons/icon-heart-02.png' %}" alt="ICON">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+    {% endfor %}
+    {% for woman in women %}
+    {% if forloop.counter == 3 %}
+    <div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item women">
+        <!-- Block2 -->
+        <div class="block2">
+            <div class="block2-pic hov-img0">
+               <a href="{{ woman.get_absolute_url }}"
+                   class="featured_img"> <img
+                        alt="" src="{{ woman.image.url }}">
+                </a>
+
+            </div>
+
+            <div class="block2-txt flex-w flex-t p-t-14">
+                <div class="block2-txt-child1 flex-col-l ">
+                    <a href="product-detail.html" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
+                        Only Check Trouser
+                    </a>
+
+                    <span class="stext-105 cl3">
+									$25.50
+								</span>
+                </div>
+
+                <div class="block2-txt-child2 flex-r p-t-3">
+                    <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
+                        <img class="icon-heart1 dis-block trans-04"
+                             src="{% static 'images/icons/icon-heart-01.png' %}" alt="ICON">
+                        <img class="icon-heart2 dis-block trans-04 ab-t-l"
+                             src="{% static 'images/icons/icon-heart-02.png' %}" alt="ICON">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+    {% endfor %}
+    {% for woman in women %}
+    {% if forloop.counter == 4 %}
+    <div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item women">
+        <!-- Block2 -->
+        <div class="block2">
+            <div class="block2-pic hov-img0">
+               <a href="{{ woman.get_absolute_url }}"
+                   class="featured_img"> <img
+                        alt="" src="{{ woman.image.url }}">
+                </a>
+
+
+            </div>
+
+            <div class="block2-txt flex-w flex-t p-t-14">
+                <div class="block2-txt-child1 flex-col-l ">
+                    <a href="product-detail.html" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
+                        Classic Trench Coat
+                    </a>
+
+                    <span class="stext-105 cl3">
+									$75.00
+								</span>
+                </div>
+
+                <div class="block2-txt-child2 flex-r p-t-3">
+                    <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
+                        <img class="icon-heart1 dis-block trans-04"
+                             src="{% static 'images/icons/icon-heart-01.png' %}" alt="ICON">
+                        <img class="icon-heart2 dis-block trans-04 ab-t-l"
+                             src="{% static 'images/icons/icon-heart-02.png' %}" alt="ICON">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endif %}
+{% endfor %}
+<div class="row isotope-grid">
+    {% for woman in women %}
+    {% if forloop.counter == 5 %}
+    <div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item women">
+        <!-- Block2 -->
+        <div class="block2">
+            <div class="block2-pic hov-img0">
+                <a href="{{ woman.get_absolute_url }}"
+                   class="featured_img"> <img
+                        alt="" src="{{ woman.image.url }}">
+                </a>
+
+            </div>
+
+            <div class="block2-txt flex-w flex-t p-t-14">
+                <div class="block2-txt-child1 flex-col-l ">
+                    <a href="product-detail.html" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
+                        Esprit Ruffle Shirt
+                    </a>
+
+                    <span class="stext-105 cl3">
+									$16.64
+								</span>
+                </div>
+
+                <div class="block2-txt-child2 flex-r p-t-3">
+                    <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
+                        <img class="icon-heart1 dis-block trans-04"
+                             src="{% static 'images/icons/icon-heart-01.png' %}" alt="ICON">
+                        <img class="icon-heart2 dis-block trans-04 ab-t-l"
+                             src="{% static 'images/icons/icon-heart-02.png' %}" alt="ICON">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+    {% endfor %}
+    {% for woman in women %}
+    {% if forloop.counter == 6 %}
+    <div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item women">
+        <!-- Block2 -->
+        <div class="block2">
+            <div class="block2-pic hov-img0">
+                <a href="{{ woman.get_absolute_url }}"
+                   class="featured_img"> <img
+                        alt="" src="{{ woman.image.url }}">
+                </a>
+
+
+            </div>
+
+            <div class="block2-txt flex-w flex-t p-t-14">
+                <div class="block2-txt-child1 flex-col-l ">
+                    <a href="product-detail.html" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
+                        Herschel supply
+                    </a>
+
+                    <span class="stext-105 cl3">
+									$35.31
+								</span>
+                </div>
+
+                <div class="block2-txt-child2 flex-r p-t-3">
+                    <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
+                        <img class="icon-heart1 dis-block trans-04"
+                             src="{% static 'images/icons/icon-heart-01.png' %}" alt="ICON">
+                        <img class="icon-heart2 dis-block trans-04 ab-t-l"
+                             src="{% static 'images/icons/icon-heart-02.png' %}" alt="ICON">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+    {% endfor %}
+    {% for woman in women %}
+    {% if forloop.counter == 7 %}
+    <div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item women">
+        <!-- Block2 -->
+        <div class="block2">
+            <div class="block2-pic hov-img0">
+               <a href="{{ woman.get_absolute_url }}"
+                   class="featured_img"> <img
+                        alt="" src="{{ woman.image.url }}">
+                </a>
+
+            </div>
+
+            <div class="block2-txt flex-w flex-t p-t-14">
+                <div class="block2-txt-child1 flex-col-l ">
+                    <a href="product-detail.html" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
+                        Only Check Trouser
+                    </a>
+
+                    <span class="stext-105 cl3">
+									$25.50
+								</span>
+                </div>
+
+                <div class="block2-txt-child2 flex-r p-t-3">
+                    <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
+                        <img class="icon-heart1 dis-block trans-04"
+                             src="{% static 'images/icons/icon-heart-01.png' %}" alt="ICON">
+                        <img class="icon-heart2 dis-block trans-04 ab-t-l"
+                             src="{% static 'images/icons/icon-heart-02.png' %}" alt="ICON">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+    {% endfor %}
+    {% for woman in women %}
+    {% if forloop.counter == 8 %}
+    <div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item women">
+        <!-- Block2 -->
+        <div class="block2">
+            <div class="block2-pic hov-img0">
+               <a href="{{ woman.get_absolute_url }}"
+                   class="featured_img"> <img
+                        alt="" src="{{ woman.image.url }}">
+                </a>
+
+
+            </div>
+
+            <div class="block2-txt flex-w flex-t p-t-14">
+                <div class="block2-txt-child1 flex-col-l ">
+                    <a href="product-detail.html" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
+                        Classic Trench Coat
+                    </a>
+
+                    <span class="stext-105 cl3">
+									$75.00
+								</span>
+                </div>
+
+                <div class="block2-txt-child2 flex-r p-t-3">
+                    <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
+                        <img class="icon-heart1 dis-block trans-04"
+                             src="{% static 'images/icons/icon-heart-01.png' %}" alt="ICON">
+                        <img class="icon-heart2 dis-block trans-04 ab-t-l"
+                             src="{% static 'images/icons/icon-heart-02.png' %}" alt="ICON">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endif %}
+    {% endfor %}
+
+<div class="row isotope-grid">
+    {% for woman in women %}
+    {% if forloop.counter == 9 %}
+    <div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item women">
+        <!-- Block2 -->
+        <div class="block2">
+            <div class="block2-pic hov-img0">
+                <a href="{{ woman.get_absolute_url }}"
+                   class="featured_img"> <img
+                        alt="" src="{{ woman.image.url }}">
+                </a>
+
+            </div>
+
+            <div class="block2-txt flex-w flex-t p-t-14">
+                <div class="block2-txt-child1 flex-col-l ">
+                    <a href="product-detail.html" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
+                        Esprit Ruffle Shirt
+                    </a>
+
+                    <span class="stext-105 cl3">
+									$16.64
+								</span>
+                </div>
+
+                <div class="block2-txt-child2 flex-r p-t-3">
+                    <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
+                        <img class="icon-heart1 dis-block trans-04"
+                             src="{% static 'images/icons/icon-heart-01.png' %}" alt="ICON">
+                        <img class="icon-heart2 dis-block trans-04 ab-t-l"
+                             src="{% static 'images/icons/icon-heart-02.png' %}" alt="ICON">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+    {% endfor %}
+    {% for woman in women %}
+    {% if forloop.counter == 10 %}
+    <div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item women">
+        <!-- Block2 -->
+        <div class="block2">
+            <div class="block2-pic hov-img0">
+                <a href="{{ woman.get_absolute_url }}"
+                   class="featured_img"> <img
+                        alt="" src="{{ woman.image.url }}">
+                </a>
+
+
+            </div>
+
+            <div class="block2-txt flex-w flex-t p-t-14">
+                <div class="block2-txt-child1 flex-col-l ">
+                    <a href="product-detail.html" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
+                        Herschel supply
+                    </a>
+
+                    <span class="stext-105 cl3">
+									$35.31
+								</span>
+                </div>
+
+                <div class="block2-txt-child2 flex-r p-t-3">
+                    <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
+                        <img class="icon-heart1 dis-block trans-04"
+                             src="{% static 'images/icons/icon-heart-01.png' %}" alt="ICON">
+                        <img class="icon-heart2 dis-block trans-04 ab-t-l"
+                             src="{% static 'images/icons/icon-heart-02.png' %}" alt="ICON">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+    {% endfor %}
+    {% for woman in women %}
+    {% if forloop.counter == 11 %}
+    <div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item women">
+        <!-- Block2 -->
+        <div class="block2">
+            <div class="block2-pic hov-img0">
+               <a href="{{ woman.get_absolute_url }}"
+                   class="featured_img"> <img
+                        alt="" src="{{ woman.image.url }}">
+                </a>
+
+            </div>
+
+            <div class="block2-txt flex-w flex-t p-t-14">
+                <div class="block2-txt-child1 flex-col-l ">
+                    <a href="product-detail.html" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
+                        Only Check Trouser
+                    </a>
+
+                    <span class="stext-105 cl3">
+									$25.50
+								</span>
+                </div>
+
+                <div class="block2-txt-child2 flex-r p-t-3">
+                    <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
+                        <img class="icon-heart1 dis-block trans-04"
+                             src="{% static 'images/icons/icon-heart-01.png' %}" alt="ICON">
+                        <img class="icon-heart2 dis-block trans-04 ab-t-l"
+                             src="{% static 'images/icons/icon-heart-02.png' %}" alt="ICON">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+    {% endfor %}
+    {% for woman in women %}
+    {% if forloop.counter == 12 %}
+    <div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item women">
+        <!-- Block2 -->
+        <div class="block2">
+            <div class="block2-pic hov-img0">
+               <a href="{{ woman.get_absolute_url }}"
+                   class="featured_img"> <img
+                        alt="" src="{{ woman.image.url }}">
+                </a>
+
+
+            </div>
+
+            <div class="block2-txt flex-w flex-t p-t-14">
+                <div class="block2-txt-child1 flex-col-l ">
+                    <a href="product-detail.html" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
+                        Classic Trench Coat
+                    </a>
+
+                    <span class="stext-105 cl3">
+									$75.00
+								</span>
+                </div>
+
+                <div class="block2-txt-child2 flex-r p-t-3">
+                    <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
+                        <img class="icon-heart1 dis-block trans-04"
+                             src="{% static 'images/icons/icon-heart-01.png' %}" alt="ICON">
+                        <img class="icon-heart2 dis-block trans-04 ab-t-l"
+                             src="{% static 'images/icons/icon-heart-02.png' %}" alt="ICON">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endif %}
+{% endfor %}
+<div class="row isotope-grid">
+    {% for woman in women %}
+    {% if forloop.counter == 13 %}
+    <div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item women">
+        <!-- Block2 -->
+        <div class="block2">
+            <div class="block2-pic hov-img0">
+                <a href="{{ woman.get_absolute_url }}"
+                   class="featured_img"> <img
+                        alt="" src="{{ woman.image.url }}">
+                </a>
+
+            </div>
+
+            <div class="block2-txt flex-w flex-t p-t-14">
+                <div class="block2-txt-child1 flex-col-l ">
+                    <a href="product-detail.html" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
+                        Esprit Ruffle Shirt
+                    </a>
+
+                    <span class="stext-105 cl3">
+									$16.64
+								</span>
+                </div>
+
+                <div class="block2-txt-child2 flex-r p-t-3">
+                    <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
+                        <img class="icon-heart1 dis-block trans-04"
+                             src="{% static 'images/icons/icon-heart-01.png' %}" alt="ICON">
+                        <img class="icon-heart2 dis-block trans-04 ab-t-l"
+                             src="{% static 'images/icons/icon-heart-02.png' %}" alt="ICON">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+    {% endfor %}
+    {% for woman in women %}
+    {% if forloop.counter == 14 %}
+    <div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item women">
+        <!-- Block2 -->
+        <div class="block2">
+            <div class="block2-pic hov-img0">
+                <a href="{{ woman.get_absolute_url }}"
+                   class="featured_img"> <img
+                        alt="" src="{{ woman.image.url }}">
+                </a>
+
+
+            </div>
+
+            <div class="block2-txt flex-w flex-t p-t-14">
+                <div class="block2-txt-child1 flex-col-l ">
+                    <a href="product-detail.html" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
+                        Herschel supply
+                    </a>
+
+                    <span class="stext-105 cl3">
+									$35.31
+								</span>
+                </div>
+
+                <div class="block2-txt-child2 flex-r p-t-3">
+                    <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
+                        <img class="icon-heart1 dis-block trans-04"
+                             src="{% static 'images/icons/icon-heart-01.png' %}" alt="ICON">
+                        <img class="icon-heart2 dis-block trans-04 ab-t-l"
+                             src="{% static 'images/icons/icon-heart-02.png' %}" alt="ICON">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+    {% endfor %}
+    {% for woman in women %}
+    {% if forloop.counter == 15 %}
+    <div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item women">
+        <!-- Block2 -->
+        <div class="block2">
+            <div class="block2-pic hov-img0">
+               <a href="{{ woman.get_absolute_url }}"
+                   class="featured_img"> <img
+                        alt="" src="{{ woman.image.url }}">
+                </a>
+
+            </div>
+
+            <div class="block2-txt flex-w flex-t p-t-14">
+                <div class="block2-txt-child1 flex-col-l ">
+                    <a href="product-detail.html" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
+                        Only Check Trouser
+                    </a>
+
+                    <span class="stext-105 cl3">
+									$25.50
+								</span>
+                </div>
+
+                <div class="block2-txt-child2 flex-r p-t-3">
+                    <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
+                        <img class="icon-heart1 dis-block trans-04"
+                             src="{% static 'images/icons/icon-heart-01.png' %}" alt="ICON">
+                        <img class="icon-heart2 dis-block trans-04 ab-t-l"
+                             src="{% static 'images/icons/icon-heart-02.png' %}" alt="ICON">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+    {% endfor %}
+    {% for woman in women %}
+    {% if forloop.counter == 16 %}
+    <div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item women">
+        <!-- Block2 -->
+        <div class="block2">
+            <div class="block2-pic hov-img0">
+               <a href="{{ woman.get_absolute_url }}"
+                   class="featured_img"> <img
+                        alt="" src="{{ woman.image.url }}">
+                </a>
+
+
+            </div>
+
+            <div class="block2-txt flex-w flex-t p-t-14">
+                <div class="block2-txt-child1 flex-col-l ">
+                    <a href="product-detail.html" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
+                        Classic Trench Coat
+                    </a>
+
+                    <span class="stext-105 cl3">
+									$75.00
+								</span>
+                </div>
+
+                <div class="block2-txt-child2 flex-r p-t-3">
+                    <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
+                        <img class="icon-heart1 dis-block trans-04"
+                             src="{% static 'images/icons/icon-heart-01.png' %}" alt="ICON">
+                        <img class="icon-heart2 dis-block trans-04 ab-t-l"
+                             src="{% static 'images/icons/icon-heart-02.png' %}" alt="ICON">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endif %}
+    {% endfor %}
+            </div></section>
+{% endblock content %}

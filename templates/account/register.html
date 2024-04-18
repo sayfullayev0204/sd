@@ -1,0 +1,15 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% block title %}Login{% endblock title %}
+
+{% block content %}
+
+
+
+<br><br><br><br>
+<body style="background-color:powderblue;">
+  <center> <form method="post">{% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Ro'yxatdan o'tish</button>
+    </form></center>
+{% endblock content %}

@@ -1,0 +1,1227 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% block content %}
+<br><br><br>
+<!-- Product -->
+<section class="bg0 p-t-23 p-b-140">
+    <div class="container">
+
+        <div class="flex-w flex-sb-m p-b-52">
+            <div class="flex-w flex-l-m filter-tope-group m-tb-10">
+                <button class="stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5 how-active1" data-filter="*">
+                    Barchasi
+                </button>
+
+                <button class="stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5" data-filter=".women">
+                    Lab Bo'yoqlari
+                </button>
+
+                <button class="stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5" data-filter=".men">
+                    Kremlar
+                </button>
+
+<!--                <button class="stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5" data-filter=".bag">-->
+<!--                    Kids-->
+<!--                </button>-->
+
+<!--                <button class="stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5" data-filter=".shoes">-->
+<!--                    Shoes-->
+<!--                </button>-->
+
+                <button class="stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5" data-filter=".watches">
+                    Aksessuarlar
+                </button>
+            </div>
+
+
+            <!-- Search product -->
+            <div class="dis-none panel-search w-full p-t-10 p-b-15">
+                <div class="bor8 dis-flex p-l-15">
+                    <button class="size-113 flex-c-m fs-16 cl2 hov-cl1 trans-04">
+                        <i class="zmdi zmdi-search"></i>
+                    </button>
+
+                    <input class="mtext-107 cl2 size-114 plh2 p-r-15" type="text" name="search-product"
+                           placeholder="Search">
+                </div>
+            </div>
+        </div>
+
+        <div class="row isotope-grid">
+            {% for woman in women %}
+            {% if forloop.first %}
+            <div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item women">
+                <!-- Block2 -->
+
+
+                <div class="block2">
+                    <div class="block2-pic hov-img0">
+                        <a href="{{ woman.get_absolute_url }}"
+                           class="featured_img"> <img
+                                alt="" src="{{ woman.image.url }}">
+                        </a>
+
+                    </div>
+
+                    <div class="block2-txt flex-w flex-t p-t-14">
+                        <div class="block2-txt-child1 flex-col-l ">
+                            <a href="product-detail.html" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
+                                {{ woman.title }}
+                            </a>
+
+                            <span class="stext-105 cl3">
+									Price {{ woman.pricce }}$
+								</span>
+                        </div>
+
+                        <div class="block2-txt-child2 flex-r p-t-3">
+                            <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
+                                <img class="icon-heart1 dis-block trans-04"
+                                     src="{% static 'images/icons/icon-heart-01.png' %}" alt="ICON">
+                                <img class="icon-heart2 dis-block trans-04 ab-t-l"
+                                     src="{% static 'images/icons/icon-heart-02.png' %}" alt="ICON">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            {% endif %}
+            {% endfor %}
+            {% for shoe in shoes %}
+            {% if forloop.first %}
+            <div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item shoes">
+                <!-- Block2 -->
+                <div class="block2">
+                    <div class="block2-pic hov-img0">
+                        <a href="{{ shoe.get_absolute_url }}"
+                           class="featured_img"> <img
+                                alt="" src="{{ shoe.image.url }}">
+                        </a>
+                    </div>
+
+                    <div class="block2-txt flex-w flex-t p-t-14">
+                        <div class="block2-txt-child1 flex-col-l ">
+                            <a href="product-detail.html" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
+                                Converse All Star Hi Plimsolls
+                            </a>
+
+                            <span class="stext-105 cl3">
+									$75.00
+								</span>
+                        </div>
+
+                        <div class="block2-txt-child2 flex-r p-t-3">
+                            <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
+                                <img class="icon-heart1 dis-block trans-04"
+                                     src="{% static 'images/icons/icon-heart-01.png' %}" alt="ICON">
+                                <img class="icon-heart2 dis-block trans-04 ab-t-l"
+                                     src="{% static 'images/icons/icon-heart-02.png' %}" alt="ICON">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+            {% endfor %}
+            {% for kid in kids %}
+            {% if forloop.first %}
+            <div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item bag">
+                <!-- Block2 -->
+
+
+                <div class="block2">
+                    <div class="block2-pic hov-img0">
+                        <a href="{{ kid.get_absolute_url }}"
+                           class="featured_img"> <img
+                                alt="" src="{{ kid.image.url }}">
+                        </a>
+
+                    </div>
+
+                    <div class="block2-txt flex-w flex-t p-t-14">
+                        <div class="block2-txt-child1 flex-col-l ">
+                            <a href="product-detail.html" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
+                                {{ kid.title }}
+                            </a>
+
+                            <span class="stext-105 cl3">
+									Price {{ kid.price }}$
+								</span>
+                        </div>
+
+                        <div class="block2-txt-child2 flex-r p-t-3">
+                            <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
+                                <img class="icon-heart1 dis-block trans-04"
+                                     src="{% static 'images/icons/icon-heart-01.png' %}" alt="ICON">
+                                <img class="icon-heart2 dis-block trans-04 ab-t-l"
+                                     src="{% static 'images/icons/icon-heart-02.png' %}" alt="ICON">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            {% endif %}
+            {% endfor %}
+            {% for watch in watches %}
+            {% if forloop.first %}
+            <div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item watches">
+                <!-- Block2 -->
+                <div class="block2">
+                    <div class="block2-pic hov-img0">
+                        <a href="{{ watch.get_absolute_url }}"
+                           class="featured_img"> <img
+                                alt="" src="{{ watch.image.url }}">
+                        </a>
+                    </div>
+
+                    <div class="block2-txt flex-w flex-t p-t-14">
+                        <div class="block2-txt-child1 flex-col-l ">
+                            <a href="product-detail.html" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
+                                Mini Silver Mesh Watch
+                            </a>
+
+                            <span class="stext-105 cl3">
+									$86.85
+								</span>
+                        </div>
+
+                        <div class="block2-txt-child2 flex-r p-t-3">
+                            <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
+                                <img class="icon-heart1 dis-block trans-04"
+                                     src="{% static 'images/icons/icon-heart-01.png' %}" alt="ICON">
+                                <img class="icon-heart2 dis-block trans-04 ab-t-l"
+                                     src="{% static 'images/icons/icon-heart-02.png' %}" alt="ICON">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+            {% endfor %}
+            {% for kid in kids %}
+            {% if forloop.counter == 2 %}
+            <div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item bag">
+                <!-- Block2 -->
+
+
+                <div class="block2">
+                    <div class="block2-pic hov-img0">
+                        <a href="{{ kid.get_absolute_url }}"
+                           class="featured_img"> <img
+                                alt="" src="{{ kid.image.url }}">
+                        </a>
+
+                    </div>
+
+                    <div class="block2-txt flex-w flex-t p-t-14">
+                        <div class="block2-txt-child1 flex-col-l ">
+                            <a href="product-detail.html" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
+                                {{ kid.title }}
+                            </a>
+
+                            <span class="stext-105 cl3">
+									Price {{ kid.price }}$
+								</span>
+                        </div>
+
+                        <div class="block2-txt-child2 flex-r p-t-3">
+                            <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
+                                <img class="icon-heart1 dis-block trans-04"
+                                     src="{% static 'images/icons/icon-heart-01.png' %}" alt="ICON">
+                                <img class="icon-heart2 dis-block trans-04 ab-t-l"
+                                     src="{% static 'images/icons/icon-heart-02.png' %}" alt="ICON">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            {% endif %}
+            {% endfor %}
+            {% for shoe in shoes %}
+            {% if forloop.counter == 2 %}
+            <div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item shoes">
+                <!-- Block2 -->
+                <div class="block2">
+                    <div class="block2-pic hov-img0">
+                        <a href="{{ shoe.get_absolute_url }}"
+                           class="featured_img"> <img
+                                alt="" src="{{ shoe.image.url }}">
+                        </a>
+                    </div>
+
+                    <div class="block2-txt flex-w flex-t p-t-14">
+                        <div class="block2-txt-child1 flex-col-l ">
+                            <a href="product-detail.html" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
+                                Converse All Star Hi Plimsolls
+                            </a>
+
+                            <span class="stext-105 cl3">
+									$75.00
+								</span>
+                        </div>
+
+                        <div class="block2-txt-child2 flex-r p-t-3">
+                            <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
+                                <img class="icon-heart1 dis-block trans-04"
+                                     src="{% static 'images/icons/icon-heart-01.png' %}" alt="ICON">
+                                <img class="icon-heart2 dis-block trans-04 ab-t-l"
+                                     src="{% static 'images/icons/icon-heart-02.png' %}" alt="ICON">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+            {% endfor %}
+            {% for woman in women %}
+            {% if forloop.counter == 2 %}
+            <div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item women">
+                <!-- Block2 -->
+                <div class="block2">
+                    <div class="block2-pic hov-img0">
+                        <a href="{{ woman.get_absolute_url }}"
+                           class="featured_img"> <img
+                                alt="" src="{{ woman.image.url }}">
+                        </a>
+
+
+                    </div>
+
+                    <div class="block2-txt flex-w flex-t p-t-14">
+                        <div class="block2-txt-child1 flex-col-l ">
+                            <a href="product-detail.html" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
+                                Herschel supply
+                            </a>
+
+                            <span class="stext-105 cl3">
+									$35.31
+								</span>
+                        </div>
+
+                        <div class="block2-txt-child2 flex-r p-t-3">
+                            <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
+                                <img class="icon-heart1 dis-block trans-04"
+                                     src="{% static 'images/icons/icon-heart-01.png' %}" alt="ICON">
+                                <img class="icon-heart2 dis-block trans-04 ab-t-l"
+                                     src="{% static 'images/icons/icon-heart-02.png' %}" alt="ICON">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+            {% endfor %}
+            {% for man in men %}
+            {% if forloop.first %}
+            <div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item men">
+                <!-- Block2 -->
+                <div class="block2">
+                    <div class="block2-pic hov-img0">
+                        <a href="{{ man.get_absolute_url }}"
+                           class="featured_img"> <img
+                                alt="" src="{{ man.image.url }}">
+                        </a></div>
+
+                    <div class="block2-txt flex-w flex-t p-t-14">
+                        <div class="block2-txt-child1 flex-col-l ">
+                            <a href="product-detail.html" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
+                                Only Check Trouser
+                            </a>
+
+                            <span class="stext-105 cl3">
+									$25.50
+								</span>
+                        </div>
+
+                        <div class="block2-txt-child2 flex-r p-t-3">
+                            <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
+                                <img class="icon-heart1 dis-block trans-04"
+                                     src="{% static 'images/icons/icon-heart-01.png' %}" alt="ICON">
+                                <img class="icon-heart2 dis-block trans-04 ab-t-l"
+                                     src="{% static 'images/icons/icon-heart-02.png' %}" alt="ICON">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+            {% endfor %}
+            {% for kid in kids %}
+            {% if forloop.counter == 3 %}
+            <div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item bag">
+                <!-- Block2 -->
+
+
+                <div class="block2">
+                    <div class="block2-pic hov-img0">
+                        <a href="{{ kid.get_absolute_url }}"
+                           class="featured_img"> <img
+                                alt="" src="{{ kid.image.url }}">
+                        </a>
+
+                    </div>
+
+                    <div class="block2-txt flex-w flex-t p-t-14">
+                        <div class="block2-txt-child1 flex-col-l ">
+                            <a href="product-detail.html" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
+                                {{ kid.title }}
+                            </a>
+
+                            <span class="stext-105 cl3">
+									Price {{ kid.price }}$
+								</span>
+                        </div>
+
+                        <div class="block2-txt-child2 flex-r p-t-3">
+                            <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
+                                <img class="icon-heart1 dis-block trans-04"
+                                     src="{% static 'images/icons/icon-heart-01.png' %}" alt="ICON">
+                                <img class="icon-heart2 dis-block trans-04 ab-t-l"
+                                     src="{% static 'images/icons/icon-heart-02.png' %}" alt="ICON">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            {% endif %}
+            {% endfor %}
+            {% for woman in women %}
+            {% if forloop.counter == 3 %}
+            <div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item women">
+                <!-- Block2 -->
+                <div class="block2">
+                    <div class="block2-pic hov-img0">
+                        <a href="{{ woman.get_absolute_url }}"
+                           class="featured_img"> <img
+                                alt="" src="{{ woman.image.url }}">
+
+                        </a></div>
+
+                    <div class="block2-txt flex-w flex-t p-t-14">
+                        <div class="block2-txt-child1 flex-col-l ">
+                            <a href="product-detail.html" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
+                                Classic Trench Coat
+                            </a>
+
+                            <span class="stext-105 cl3">
+									$75.00
+								</span>
+                        </div>
+
+                        <div class="block2-txt-child2 flex-r p-t-3">
+                            <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
+                                <img class="icon-heart1 dis-block trans-04"
+                                     src="{% static 'images/icons/icon-heart-01.png' %}" alt="ICON">
+                                <img class="icon-heart2 dis-block trans-04 ab-t-l"
+                                     src="{% static 'images/icons/icon-heart-02.png' %}" alt="ICON">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+            {% endfor %}
+            {% for woman in women %}
+            {% if forloop.counter == 4 %}
+            <div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item women">
+                <!-- Block2 -->
+                <div class="block2">
+                    <div class="block2-pic hov-img0">
+                        <a href="{{ woman.get_absolute_url }}"
+                           class="featured_img"> <img
+                                alt="" src="{{ woman.image.url }}">
+                        </a></div>
+
+                    <div class="block2-txt flex-w flex-t p-t-14">
+                        <div class="block2-txt-child1 flex-col-l ">
+                            <a href="product-detail.html" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
+                                Front Pocket Jumper
+                            </a>
+
+                            <span class="stext-105 cl3">
+									$34.75
+								</span>
+                        </div>
+
+                        <div class="block2-txt-child2 flex-r p-t-3">
+                            <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
+                                <img class="icon-heart1 dis-block trans-04"
+                                     src="{% static 'images/icons/icon-heart-01.png' %}" alt="ICON">
+                                <img class="icon-heart2 dis-block trans-04 ab-t-l"
+                                     src="{% static 'images/icons/icon-heart-02.png' %}" alt="ICON">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+            {% endfor %}
+            {% for kid in kids %}
+            {% if forloop.counter == 4 %}
+            <div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item bag">
+                <!-- Block2 -->
+
+
+                <div class="block2">
+                    <div class="block2-pic hov-img0">
+                        <a href="{{ kid.get_absolute_url }}"
+                           class="featured_img"> <img
+                                alt="" src="{{ kid.image.url }}">
+                        </a>
+
+                    </div>
+
+                    <div class="block2-txt flex-w flex-t p-t-14">
+                        <div class="block2-txt-child1 flex-col-l ">
+                            <a href="product-detail.html" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
+                                {{ kid.title }}
+                            </a>
+
+                            <span class="stext-105 cl3">
+									Price {{ kid.price }}$
+								</span>
+                        </div>
+
+                        <div class="block2-txt-child2 flex-r p-t-3">
+                            <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
+                                <img class="icon-heart1 dis-block trans-04"
+                                     src="{% static 'images/icons/icon-heart-01.png' %}" alt="ICON">
+                                <img class="icon-heart2 dis-block trans-04 ab-t-l"
+                                     src="{% static 'images/icons/icon-heart-02.png' %}" alt="ICON">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            {% endif %}
+            {% endfor %}
+            {% for watch in watches %}
+            {% if forloop.counter == 2 %}
+            <div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item watches">
+                <!-- Block2 -->
+                <div class="block2">
+                    <div class="block2-pic hov-img0">
+                        <a href="{{ watch.get_absolute_url }}"
+                           class="featured_img"> <img
+                                alt="" src="{{ watch.image.url }}">
+                        </a>
+                    </div>
+
+                    <div class="block2-txt flex-w flex-t p-t-14">
+                        <div class="block2-txt-child1 flex-col-l ">
+                            <a href="product-detail.html" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
+                                Vintage Inspired Classic
+                            </a>
+
+                            <span class="stext-105 cl3">
+									$93.20
+								</span>
+                        </div>
+
+                        <div class="block2-txt-child2 flex-r p-t-3">
+                            <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
+                                <img class="icon-heart1 dis-block trans-04"
+                                     src="{% static 'images/icons/icon-heart-01.png' %}" alt="ICON">
+                                <img class="icon-heart2 dis-block trans-04 ab-t-l"
+                                     src="{% static 'images/icons/icon-heart-02.png' %}" alt="ICON">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+            {% endfor %}
+            {% for woman in women %}
+            {% if forloop.counter == 5 %}
+            <div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item women">
+                <!-- Block2 -->
+                <div class="block2">
+                    <div class="block2-pic hov-img0">
+                        <a href="{{ woman.get_absolute_url }}"
+                           class="featured_img"> <img
+                                alt="" src="{{ woman.image.url }}">
+                        </a></div>
+
+                    <div class="block2-txt flex-w flex-t p-t-14">
+                        <div class="block2-txt-child1 flex-col-l ">
+                            <a href="product-detail.html" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
+                                Shirt in Stretch Cotton
+                            </a>
+
+                            <span class="stext-105 cl3">
+									$52.66
+								</span>
+                        </div>
+
+                        <div class="block2-txt-child2 flex-r p-t-3">
+                            <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
+                                <img class="icon-heart1 dis-block trans-04"
+                                     src="{% static 'images/icons/icon-heart-01.png' %}" alt="ICON">
+                                <img class="icon-heart2 dis-block trans-04 ab-t-l"
+                                     src="{% static 'images/icons/icon-heart-02.png' %}" alt="ICON">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+            {% endfor %}
+            {% for kid in kids %}
+            {% if forloop.counter == 5 %}
+            <div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item bag">
+                <!-- Block2 -->
+
+
+                <div class="block2">
+                    <div class="block2-pic hov-img0">
+                        <a href="{{ kid.get_absolute_url }}"
+                           class="featured_img"> <img
+                                alt="" src="{{ kid.image.url }}">
+                        </a>
+
+                    </div>
+
+                    <div class="block2-txt flex-w flex-t p-t-14">
+                        <div class="block2-txt-child1 flex-col-l ">
+                            <a href="product-detail.html" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
+                                {{ kid.title }}
+                            </a>
+
+                            <span class="stext-105 cl3">
+									Price {{ kid.price }}$
+								</span>
+                        </div>
+
+                        <div class="block2-txt-child2 flex-r p-t-3">
+                            <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
+                                <img class="icon-heart1 dis-block trans-04"
+                                     src="{% static 'images/icons/icon-heart-01.png' %}" alt="ICON">
+                                <img class="icon-heart2 dis-block trans-04 ab-t-l"
+                                     src="{% static 'images/icons/icon-heart-02.png' %}" alt="ICON">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            {% endif %}
+            {% endfor %}
+            {% for shoe in shoes %}
+            {% if forloop.counter == 3 %}
+            <div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item shoes">
+                <!-- Block2 -->
+                <div class="block2">
+                    <div class="block2-pic hov-img0">
+                        <a href="{{ shoe.get_absolute_url }}"
+                           class="featured_img"> <img
+                                alt="" src="{{ shoe.image.url }}">
+                        </a>
+                    </div>
+
+                    <div class="block2-txt flex-w flex-t p-t-14">
+                        <div class="block2-txt-child1 flex-col-l ">
+                            <a href="product-detail.html" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
+                                Converse All Star Hi Plimsolls
+                            </a>
+
+                            <span class="stext-105 cl3">
+									$75.00
+								</span>
+                        </div>
+
+                        <div class="block2-txt-child2 flex-r p-t-3">
+                            <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
+                                <img class="icon-heart1 dis-block trans-04"
+                                     src="{% static 'images/icons/icon-heart-01.png' %}" alt="ICON">
+                                <img class="icon-heart2 dis-block trans-04 ab-t-l"
+                                     src="{% static 'images/icons/icon-heart-02.png' %}" alt="ICON">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+            {% endfor %}
+            {% for woman in women %}
+            {% if forloop.counter == 6 %}
+            <div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item women">
+                <!-- Block2 -->
+                <div class="block2">
+                    <div class="block2-pic hov-img0">
+                        <a href="{{ woman.get_absolute_url }}"
+                           class="featured_img"> <img
+                                alt="" src="{{ woman.image.url }}">
+                        </a></div>
+
+                    <div class="block2-txt flex-w flex-t p-t-14">
+                        <div class="block2-txt-child1 flex-col-l ">
+                            <a href="product-detail.html" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
+                                Pieces Metallic Printed
+                            </a>
+
+                            <span class="stext-105 cl3">
+									$18.96
+								</span>
+                        </div>
+
+                        <div class="block2-txt-child2 flex-r p-t-3">
+                            <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
+                                <img class="icon-heart1 dis-block trans-04"
+                                     src="{% static 'images/icons/icon-heart-01.png' %}" alt="ICON">
+                                <img class="icon-heart2 dis-block trans-04 ab-t-l"
+                                     src="{% static 'images/icons/icon-heart-02.png' %}" alt="ICON">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+            {% endfor %}
+            {% for shoe in shoes %}
+            {% if forloop.counter == 4 %}
+            <div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item shoes">
+                <!-- Block2 -->
+                <div class="block2">
+                    <div class="block2-pic hov-img0">
+                        <a href="{{ shoe.get_absolute_url }}"
+                           class="featured_img"> <img
+                                alt="" src="{{ shoe.image.url }}">
+                        </a>
+                    </div>
+
+                    <div class="block2-txt flex-w flex-t p-t-14">
+                        <div class="block2-txt-child1 flex-col-l ">
+                            <a href="product-detail.html" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
+                                Converse All Star Hi Plimsolls
+                            </a>
+
+                            <span class="stext-105 cl3">
+									$75.00
+								</span>
+                        </div>
+
+                        <div class="block2-txt-child2 flex-r p-t-3">
+                            <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
+                                <img class="icon-heart1 dis-block trans-04"
+                                     src="{% static 'images/icons/icon-heart-01.png' %}" alt="ICON">
+                                <img class="icon-heart2 dis-block trans-04 ab-t-l"
+                                     src="{% static 'images/icons/icon-heart-02.png' %}" alt="ICON">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+            {% endfor %}
+            {% for woman in women %}
+            {% if forloop.counter == 7 %}
+            <div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item women">
+                <!-- Block2 -->
+                <div class="block2">
+                    <div class="block2-pic hov-img0">
+                        <a href="{{ woman.get_absolute_url }}"
+                           class="featured_img"> <img
+                                alt="" src="{{ woman.image.url }}">
+                        </a></div>
+
+                    <div class="block2-txt flex-w flex-t p-t-14">
+                        <div class="block2-txt-child1 flex-col-l ">
+                            <a href="product-detail.html" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
+                                Femme T-Shirt In Stripe
+                            </a>
+
+                            <span class="stext-105 cl3">
+									$25.85
+								</span>
+                        </div>
+
+                        <div class="block2-txt-child2 flex-r p-t-3">
+                            <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
+                                <img class="icon-heart1 dis-block trans-04"
+                                     src="{% static 'images/icons/icon-heart-01.png' %}" alt="ICON">
+                                <img class="icon-heart2 dis-block trans-04 ab-t-l"
+                                     src="{% static 'images/icons/icon-heart-02.png' %}" alt="ICON">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+            {% endfor %}
+            {% for shoe in shoes %}
+            {% if forloop.counter == 5 %}
+            <div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item shoes">
+                <!-- Block2 -->
+                <div class="block2">
+                    <div class="block2-pic hov-img0">
+                        <a href="{{ shoe.get_absolute_url }}"
+                           class="featured_img"> <img
+                                alt="" src="{{ shoe.image.url }}">
+                        </a>
+                    </div>
+
+                    <div class="block2-txt flex-w flex-t p-t-14">
+                        <div class="block2-txt-child1 flex-col-l ">
+                            <a href="product-detail.html" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
+                                Converse All Star Hi Plimsolls
+                            </a>
+
+                            <span class="stext-105 cl3">
+									$75.00
+								</span>
+                        </div>
+
+                        <div class="block2-txt-child2 flex-r p-t-3">
+                            <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
+                                <img class="icon-heart1 dis-block trans-04"
+                                     src="{% static 'images/icons/icon-heart-01.png' %}" alt="ICON">
+                                <img class="icon-heart2 dis-block trans-04 ab-t-l"
+                                     src="{% static 'images/icons/icon-heart-02.png' %}" alt="ICON">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+            {% endfor %}
+            {% for shoe in shoes %}
+            {% if forloop.counter == 6 %}
+            <div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item shoes">
+                <!-- Block2 -->
+                <div class="block2">
+                    <div class="block2-pic hov-img0">
+                        <a href="{{ shoe.get_absolute_url }}"
+                           class="featured_img"> <img
+                                alt="" src="{{ shoe.image.url }}">
+                        </a>
+                    </div>
+
+                    <div class="block2-txt flex-w flex-t p-t-14">
+                        <div class="block2-txt-child1 flex-col-l ">
+                            <a href="product-detail.html" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
+                                Converse All Star Hi Plimsolls
+                            </a>
+
+                            <span class="stext-105 cl3">
+									$75.00
+								</span>
+                        </div>
+
+                        <div class="block2-txt-child2 flex-r p-t-3">
+                            <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
+                                <img class="icon-heart1 dis-block trans-04"
+                                     src="{% static 'images/icons/icon-heart-01.png' %}" alt="ICON">
+                                <img class="icon-heart2 dis-block trans-04 ab-t-l"
+                                     src="{% static 'images/icons/icon-heart-02.png' %}" alt="ICON">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+            {% endfor %}
+            {% for kid in kids %}
+            {% if forloop.counter == 6 %}
+            <div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item bag">
+                <!-- Block2 -->
+
+
+                <div class="block2">
+                    <div class="block2-pic hov-img0">
+                        <a href="{{ kid.get_absolute_url }}"
+                           class="featured_img"> <img
+                                alt="" src="{{ kid.image.url }}">
+                        </a>
+
+                    </div>
+
+                    <div class="block2-txt flex-w flex-t p-t-14">
+                        <div class="block2-txt-child1 flex-col-l ">
+                            <a href="product-detail.html" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
+                                {{ kid.title }}
+                            </a>
+
+                            <span class="stext-105 cl3">
+									Price {{ kid.price }}$
+								</span>
+                        </div>
+
+                        <div class="block2-txt-child2 flex-r p-t-3">
+                            <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
+                                <img class="icon-heart1 dis-block trans-04"
+                                     src="{% static 'images/icons/icon-heart-01.png' %}" alt="ICON">
+                                <img class="icon-heart2 dis-block trans-04 ab-t-l"
+                                     src="{% static 'images/icons/icon-heart-02.png' %}" alt="ICON">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            {% endif %}
+            {% endfor %}
+            {% for watch in watches %}
+            {% if forloop.counter == 3 %}
+            <div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item watches">
+                <!-- Block2 -->
+                <div class="block2">
+                    <div class="block2-pic hov-img0">
+                        <a href="{{ watch.get_absolute_url }}"
+                           class="featured_img"> <img
+                                alt="" src="{{ watch.image.url }}">
+                        </a>
+                    </div>
+
+                    <div class="block2-txt flex-w flex-t p-t-14">
+                        <div class="block2-txt-child1 flex-col-l ">
+                            <a href="product-detail.html" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
+                                Mini Silver Mesh Watch
+                            </a>
+
+                            <span class="stext-105 cl3">
+									$86.85
+								</span>
+                        </div>
+
+                        <div class="block2-txt-child2 flex-r p-t-3">
+                            <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
+                                <img class="icon-heart1 dis-block trans-04"
+                                     src="{% static 'images/icons/icon-heart-01.png' %}" alt="ICON">
+                                <img class="icon-heart2 dis-block trans-04 ab-t-l"
+                                     src="{% static 'images/icons/icon-heart-02.png' %}" alt="ICON">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+            {% endfor %}
+            {% for man in men %}
+            {% if forloop.counter == 2 %}
+            <div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item men">
+                <!-- Block2 -->
+                <div class="block2">
+                    <div class="block2-pic hov-img0">
+                        <a href="{{ man.get_absolute_url }}"
+                           class="featured_img"> <img
+                                alt="" src="{{ man.image.url }}"></a>
+                    </div>
+
+                    <div class="block2-txt flex-w flex-t p-t-14">
+                        <div class="block2-txt-child1 flex-col-l ">
+                            <a href="product-detail.html" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
+                                Herschel supply
+                            </a>
+
+                            <span class="stext-105 cl3">
+									$63.16
+								</span>
+                        </div>
+
+                        <div class="block2-txt-child2 flex-r p-t-3">
+                            <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
+                                <img class="icon-heart1 dis-block trans-04"
+                                     src="{% static 'images/icons/icon-heart-01.png' %}" alt="ICON">
+                                <img class="icon-heart2 dis-block trans-04 ab-t-l"
+                                     src="{% static 'images/icons/icon-heart-02.png' %}" alt="ICON">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+            {% endfor %}
+            {% for man in men %}
+            {% if forloop.counter == 3 %}
+            <div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item men">
+                <!-- Block2 -->
+                <div class="block2">
+                    <div class="block2-pic hov-img0">
+                        <a href="{{ man.get_absolute_url }}"
+                           class="featured_img"> <img
+                                alt="" src="{{ man.image.url }}"></a>
+                    </div>
+
+                    <div class="block2-txt flex-w flex-t p-t-14">
+                        <div class="block2-txt-child1 flex-col-l ">
+                            <a href="product-detail.html" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
+                                Herschel supply
+                            </a>
+
+                            <span class="stext-105 cl3">
+									$63.15
+								</span>
+                        </div>
+
+                        <div class="block2-txt-child2 flex-r p-t-3">
+                            <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
+                                <img class="icon-heart1 dis-block trans-04"
+                                     src="{% static 'images/icons/icon-heart-01.png' %}" alt="ICON">
+                                <img class="icon-heart2 dis-block trans-04 ab-t-l"
+                                     src="{% static 'images/icons/icon-heart-02.png' %}" alt="ICON">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+            {% endfor %}
+            {% for man in men %}
+            {% if forloop.counter == 4 %}
+            <div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item men">
+                <!-- Block2 -->
+                <div class="block2">
+                    <div class="block2-pic hov-img0">
+                        <a href="{{ man.get_absolute_url }}"
+                           class="featured_img"> <img
+                                alt="" src="{{ man.image.url }}"></a>
+                    </div>
+
+                    <div class="block2-txt flex-w flex-t p-t-14">
+                        <div class="block2-txt-child1 flex-col-l ">
+                            <a href="product-detail.html" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
+                                Herschel supply
+                            </a>
+
+                            <span class="stext-105 cl3">
+									$63.15
+								</span>
+                        </div>
+
+                        <div class="block2-txt-child2 flex-r p-t-3">
+                            <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
+                                <img class="icon-heart1 dis-block trans-04"
+                                     src="{% static 'images/icons/icon-heart-01.png' %}" alt="ICON">
+                                <img class="icon-heart2 dis-block trans-04 ab-t-l"
+                                     src="{% static 'images/icons/icon-heart-02.png' %}" alt="ICON">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+            {% endfor %}
+            {% for woman in women %}
+            {% if forloop.counter == 8 %}
+            <div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item women">
+                <!-- Block2 -->
+                <div class="block2">
+                    <div class="block2-pic hov-img0">
+                        <a href="{{ woman.get_absolute_url }}"
+                           class="featured_img"> <img
+                                alt="" src="{{ woman.image.url }}">
+                        </a></div>
+
+                    <div class="block2-txt flex-w flex-t p-t-14">
+                        <div class="block2-txt-child1 flex-col-l ">
+                            <a href="product-detail.html" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
+                                T-Shirt with Sleeve
+                            </a>
+
+                            <span class="stext-105 cl3">
+									$18.49
+								</span>
+                        </div>
+
+                        <div class="block2-txt-child2 flex-r p-t-3">
+                            <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
+                                <img class="icon-heart1 dis-block trans-04"
+                                     src="{% static 'images/icons/icon-heart-01.png' %}" alt="ICON">
+                                <img class="icon-heart2 dis-block trans-04 ab-t-l"
+                                     src="{% static 'images/icons/icon-heart-02.png' %}" alt="ICON">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+            {% endfor %}
+            {% for woman in women %}
+            {% if forloop.counter == 9 %}
+            <div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item ">
+                <!-- Block2 -->
+                <div class="block2">
+                    <div class="block2-pic hov-img0">
+                        <a href="{{ woman.get_absolute_url }}"
+                           class="featured_img"> <img
+                                alt="" src="{{ woman.image.url }}">
+                        </a></div>
+
+                    <div class="block2-txt flex-w flex-t p-t-14">
+                        <div class="block2-txt-child1 flex-col-l ">
+                            <a href="product-detail.html" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
+                                Pretty Little Thing
+                            </a>
+
+                            <span class="stext-105 cl3">
+									$54.79
+								</span>
+                        </div>
+
+                        <div class="block2-txt-child2 flex-r p-t-3">
+                            <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
+                                <img class="icon-heart1 dis-block trans-04"
+                                     src="{% static 'images/icons/icon-heart-01.png' %}" alt="ICON">
+                                <img class="icon-heart2 dis-block trans-04 ab-t-l"
+                                     src="{% static 'images/icons/icon-heart-02.png' %}" alt="ICON">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+            {% endfor %}
+            {% for man in men %}
+            {% if forloop.counter == 5 %}
+            <div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item men">
+                <!-- Block2 -->
+                <div class="block2">
+                    <div class="block2-pic hov-img0">
+                        <a href="{{ man.get_absolute_url }}"
+                           class="featured_img"> <img
+                                alt="" src="{{ man.image.url }}"></a>
+                    </div>
+
+                    <div class="block2-txt flex-w flex-t p-t-14">
+                        <div class="block2-txt-child1 flex-col-l ">
+                            <a href="product-detail.html" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
+                                Herschel supply
+                            </a>
+
+                            <span class="stext-105 cl3">
+									$63.15
+								</span>
+                        </div>
+
+                        <div class="block2-txt-child2 flex-r p-t-3">
+                            <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
+                                <img class="icon-heart1 dis-block trans-04"
+                                     src="{% static 'images/icons/icon-heart-01.png' %}" alt="ICON">
+                                <img class="icon-heart2 dis-block trans-04 ab-t-l"
+                                     src="{% static 'images/icons/icon-heart-02.png' %}" alt="ICON">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+            {% endfor %}
+            {% for watch in watches %}
+            {% if forloop.counter == 4 %}
+            <div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item watches">
+                <!-- Block2 -->
+                <div class="block2">
+                    <div class="block2-pic hov-img0">
+                        <a href="{{ watch.get_absolute_url }}"
+                           class="featured_img"> <img
+                                alt="" src="{{ watch.image.url }}">
+                        </a>
+                    </div>
+
+                    <div class="block2-txt flex-w flex-t p-t-14">
+                        <div class="block2-txt-child1 flex-col-l ">
+                            <a href="product-detail.html" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
+                                Mini Silver Mesh Watch
+                            </a>
+
+                            <span class="stext-105 cl3">
+									$86.85
+								</span>
+                        </div>
+
+                        <div class="block2-txt-child2 flex-r p-t-3">
+                            <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
+                                <img class="icon-heart1 dis-block trans-04"
+                                     src="{% static 'images/icons/icon-heart-01.png' %}" alt="ICON">
+                                <img class="icon-heart2 dis-block trans-04 ab-t-l"
+                                     src="{% static 'images/icons/icon-heart-02.png' %}" alt="ICON">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+            {% endfor %}
+            {% for watch in watches %}
+            {% if forloop.counter == 5 %}
+            <div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item watches">
+                <!-- Block2 -->
+                <div class="block2">
+                    <div class="block2-pic hov-img0">
+                        <a href="{{ watch.get_absolute_url }}"
+                           class="featured_img"> <img
+                                alt="" src="{{ watch.image.url }}">
+                        </a>
+                    </div>
+
+                    <div class="block2-txt flex-w flex-t p-t-14">
+                        <div class="block2-txt-child1 flex-col-l ">
+                            <a href="product-detail.html" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
+                                Mini Silver Mesh Watch
+                            </a>
+
+                            <span class="stext-105 cl3">
+									$86.85
+								</span>
+                        </div>
+
+                        <div class="block2-txt-child2 flex-r p-t-3">
+                            <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
+                                <img class="icon-heart1 dis-block trans-04"
+                                     src="{% static 'images/icons/icon-heart-01.png' %}" alt="ICON">
+                                <img class="icon-heart2 dis-block trans-04 ab-t-l"
+                                     src="{% static 'images/icons/icon-heart-02.png' %}" alt="ICON">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+            {% endfor %}
+            {% for woman in women %}
+            {% if forloop.counter == 10 %}
+            <div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item women">
+                <!-- Block2 -->
+                <div class="block2">
+                    <div class="block2-pic hov-img0">
+                        <a href="{{ woman.get_absolute_url }}"
+                           class="featured_img"> <img
+                                alt="" src="{{ woman.image.url }}">
+                        </a></div>
+
+                    <div class="block2-txt flex-w flex-t p-t-14">
+                        <div class="block2-txt-child1 flex-col-l ">
+                            <a href="product-detail.html" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
+                                Square Neck Back
+                            </a>
+
+                            <span class="stext-105 cl3">
+									$29.64
+								</span>
+                        </div>
+
+                        <div class="block2-txt-child2 flex-r p-t-3">
+                            <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
+                                <img class="icon-heart1 dis-block trans-04"
+                                     src="{% static 'images/icons/icon-heart-01.png' %}" alt="ICON">
+                                <img class="icon-heart2 dis-block trans-04 ab-t-l"
+                                     src="{% static 'images/icons/icon-heart-02.png' %}" alt="ICON">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+        {% endfor %}
+
+    </div>
+</section>
+
+
+{% endblock content %}
